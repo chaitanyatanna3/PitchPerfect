@@ -113,15 +113,11 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     }
     
     
-    // MARK: Connect List of Audio Nodes
-    
-    func connectAudioNodes(nodes: AVAudioNode...) {
-        for x in 0..<nodes.count-1 {
-            audioEngine.connect(nodes[x], to: nodes[x+1], format: audioFile.processingFormat)
-        }
-    }
-    
     @objc func stopAudio() {
+        
+        if let audioPlayerNode = audioPlayerNode {
+            audioPlayerNode.stop()
+        }
         
         if let stopTimer = stopTimer {
             stopTimer.invalidate()
@@ -129,16 +125,19 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
         
         configureUI(playState: .NotPlaying)
         
-        if let audioPlayerNode = audioPlayerNode {
-            audioPlayerNode.stop()
-        }
-        
         if let audioEngine = audioEngine {
             audioEngine.stop()
             audioEngine.reset()
         }
     }
     
+    // MARK: Connect List of Audio Nodes
+    
+    func connectAudioNodes(nodes: AVAudioNode...) {
+        for x in 0..<nodes.count-1 {
+            audioEngine.connect(nodes[x], to: nodes[x+1], format: audioFile.processingFormat)
+        }
+    }
     
     // MARK: UI Functions
 
