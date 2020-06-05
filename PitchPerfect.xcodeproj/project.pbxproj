@@ -14,8 +14,8 @@
 		60CDA4B11DAC8D43000AEF58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60CDA4AF1DAC8D43000AEF58 /* LaunchScreen.storyboard */; };
 		60CDA4BC1DAC8D43000AEF58 /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CDA4BB1DAC8D43000AEF58 /* PitchPerfectTests.swift */; };
 		60CDA4C71DAC8D43000AEF58 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CDA4C61DAC8D43000AEF58 /* PitchPerfectUITests.swift */; };
+		60D85314248AEE8300217845 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F770831DAFE61D008A54C0 /* PlaySoundsViewController+Audio.swift */; };
 		60F770801DAE90F7008A54C0 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F7707F1DAE90F7008A54C0 /* PlaySoundsViewController.swift */; };
-		60F770841DAFE61D008A54C0 /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F770831DAFE61D008A54C0 /* PlaySoundsViewController+Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,7 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60CDA4A91DAC8D43000AEF58 /* RecordSoundsViewController.swift in Sources */,
-				60F770841DAFE61D008A54C0 /* PlaySoundsViewController+Audio.swift in Sources */,
+				60D85314248AEE8300217845 /* PlaySoundsViewController+Audio.swift in Sources */,
 				60F770801DAE90F7008A54C0 /* PlaySoundsViewController.swift in Sources */,
 				60CDA4A71DAC8D43000AEF58 /* AppDelegate.swift in Sources */,
 			);
