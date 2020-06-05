@@ -27,20 +27,27 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
     
     // MARK: Audio Functions
     
-    func setupAudio() {
+    func setupAudio()-> Bool {
         // initialize (recording) audio file
         do {
 //            audioFile = try AVAudioFile(forReading: recordedAudioURL as URL)
             if let audioURL: URL = recordedAudioURL as URL? {
                 audioFile = try AVAudioFile(forReading: audioURL)
+                print("Audio has been setup")
+                return true;
             }
         } catch {
             showAlert(title: Alerts.AudioFileError, message: String(describing: error))
         }
-        print("Audio has been setup")
+        return false;
     }
     
     func playSound(rate: Float? = nil, pitch: Float? = nil, echo: Bool = false, reverb: Bool = false) {
+        
+        // initialize audio file
+        if !setupAudio() {
+            return;
+        }
         
         // initialize audio engine components
         audioEngine = AVAudioEngine()
