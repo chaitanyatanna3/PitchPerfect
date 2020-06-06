@@ -26,6 +26,7 @@ extension PlaySoundsViewController: AVAudioPlayerDelegate {
 
     
     // MARK: Audio Functions
+    // Changes made to the below function
     
     func setupAudio()-> Bool {
         // initialize (recording) audio file
